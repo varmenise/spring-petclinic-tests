@@ -22,5 +22,5 @@ val scn = scenario("Basic Load Test Scenario")
   setUp(scn.inject(ramp(3 users) over (10 seconds)))
     .protocols(httpProtocol)
       .assertions(
-        global.successfulRequests.percent.is(100), details("Find Owner" / "request_1").responseTime.max.lessThan(2000))
+        global.successfulRequests.percent.is(100), details("Find Owner" / "request_1").responseTime.max.lessThan(6000))
 }
